@@ -1,4 +1,4 @@
-// ==== Callbacks ====  
+// ==== Callbacks ====
 
 /* Step 1: Create a higher-order function that accepts a callback
   * Create a higher-order function named consume that can take 3 parameters.
@@ -10,7 +10,7 @@
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
-  * Create a function named multiply that returns the product of two numbers 
+  * Create a function named multiply that returns the product of two numbers
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
 
@@ -21,11 +21,11 @@
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
-// ==== Closures ==== 
+// ==== Closures ====
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation:
 
 
 const external = "I'm outside the function";
