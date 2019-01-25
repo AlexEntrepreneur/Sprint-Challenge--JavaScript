@@ -1,18 +1,44 @@
-// ==== Callbacks ====  
+// ==== Callbacks ====
 
 /* Step 1: Create a higher-order function that accepts a callback
   * Create a higher-order function named consume that can take 3 parameters.
   * The first two parameters can accept any argument
-  * The last parameter accepts a callback 
+  * The last parameter accepts a callback
   * In the body of the function return the callback with the two parameters that you created
 */
+
+function consume(a, b, callback) {
+  return callback(a, b);
+}
 
 
 /* Step 2: Create several functions to callback with consume();
   * Create a function named add that returns the sum of two numbers
-  * Create a function named multiply that returns the product of two numbers 
+  * Create a function named multiply that returns the product of two numbers
   * Create a function named greeting that accepts a first and last name and returns "Hello first-name last-name, nice to meet you!"
 */
+
+function add(a, b, callback) {
+  if (typeof a === 'number' && typeof b === 'number') {
+  return a + b;
+  }
+  else {
+    return `${add.name}: Please enter a number`;
+  }
+}
+
+function multiply(a, b) {
+  if (typeof a === 'number' && typeof b === 'number') {
+  return a * b;
+  }
+  else {
+    return `${multiply.name}: Please enter a number`;
+  }
+}
+
+function greeting (firstName, lastName) {
+  return `Hello ${firstName} ${lastName}, nice to meet you!`;
+}
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
@@ -21,12 +47,15 @@
 // consume("Mary","Poppins", greeting); // Hello Mary Poppins, nice to meet you!
 
 
-// ==== Closures ==== 
+// ==== Closures ====
 
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
-// Explanation: 
+// Explanation:
+/* The reason why `nestedfunction()` can access the variable `internal` is because of JavaScript's hierarchical scope. This means that any closure (a function that exists inside another function) has access to the variables defined in the scopes above it in the hierarchy.
 
+Hence `nestedfunction()`will have access to all the variables defined in myFunction, as well as all the functions in the global scope.
+*/
 
 const external = "I'm outside the function";
 
