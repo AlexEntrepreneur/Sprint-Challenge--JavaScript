@@ -52,7 +52,10 @@ function greeting (firstName, lastName) {
 // Explain in your own words why `nestedfunction()` can access the variable `internal`.
 
 // Explanation:
+/* The reason why `nestedfunction()` can access the variable `internal` is because of JavaScript's hierarchical scope. This means that any closure (a function that exists inside another function) has access to the variables defined in the scopes above it in the hierarchy.
 
+Hence `nestedfunction()`will have access to all the variables defined in myFunction, as well as all the functions in the global scope.
+*/
 
 const external = "I'm outside the function";
 
